@@ -12,5 +12,6 @@ try:
 except Exception as e:
     step.handle_exception(e)
 finally:
+    sr.save()
     sr.tag_commit_by_run()
     step.handle_exit()
